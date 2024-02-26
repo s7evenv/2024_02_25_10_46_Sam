@@ -1,0 +1,22 @@
+{
+
+  "scripts": {
+
+    "bundle": "esbuild userscript/deobf.js --bundle --format=iife --supported:destructuring=true --target=chrome58,firefox57,safari11,edge16 --outfile=dist/deobf.js",
+
+    "minify": "node scripts/terser.js",
+
+    "build": "npm run bundle && npm run minify"
+
+  },
+
+  "devDependencies": {
+
+    "esbuild": "^0.19.12",
+
+    "terser": "^5.27.0"
+
+  }
+ 
+}
+
